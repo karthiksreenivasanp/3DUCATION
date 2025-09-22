@@ -1,0 +1,19 @@
+{
+  "name": "interactive-edu-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.x",
+    "cors": "^2.x",
+    "dotenv": "^16.x",
+    "openai": "^4.x"
+  },
+  "devDependencies": {
+    "nodemon": "^2.x"
+  }
+}

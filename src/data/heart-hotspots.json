@@ -1,0 +1,37 @@
+[
+  {
+    "id": "la",
+    "label": "Left Atrium",
+    "desc": "Upper-left chamber that receives oxygenated blood from the lungs.",
+    "position": [0.02, 0.15, -0.05],
+    "normal": [0, 0.6, -0.8]
+  },
+  {
+    "id": "ra",
+    "label": "Right Atrium",
+    "desc": "Upper-right chamber that receives deoxygenated blood from the body.",
+    "position": [-0.03, 0.16, -0.06],
+    "normal": [0, 0.5, -0.86]
+  },
+  {
+    "id": "lv",
+    "label": "Left Ventricle",
+    "desc": "Main pumping chamber that sends oxygenated blood into the aorta.",
+    "position": [0.01, -0.04, 0.06],
+    "normal": [0.2, -0.3, 0.93]
+  },
+  {
+    "id": "rv",
+    "label": "Right Ventricle",
+    "desc": "Pumps deoxygenated blood into the pulmonary artery to the lungs.",
+    "position": [-0.07, -0.05, 0.03],
+    "normal": [-0.24, -0.33, 0.91]
+  },
+  {
+    "id": "aorta",
+    "label": "Aorta",
+    "desc": "Largest artery: carries oxygen-rich blood from the left ventricle to the body.",
+    "position": [0.06, 0.28, -0.02],
+    "normal": [0.6, 0.7, -0.35]
+  }
+]

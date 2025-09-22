@@ -1,0 +1,64 @@
+/* model-hotspots.css */
+.model-with-hotspots { position: relative; }
+
+.model-hotspot-btn {
+  all: unset;              /* let model-viewer place it, remove default button style */
+  pointer-events: auto;    /* allow clicks */
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotspot-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(10,10,10,0.90);
+  color: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  border: 2px solid rgba(255,255,255,0.06);
+}
+
+/* Info panel (bottom right card) */
+.hotspot-info {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 340px;
+  max-width: calc(100% - 36px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), #fff);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  transform: translateY(18px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .22s ease;
+  z-index: 100;
+  color: #111;
+}
+.hotspot-info.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+.hotspot-info h3 { margin: 0 0 8px; font-size: 18px; }
+.hotspot-info p { margin: 0 0 12px; color: #333; font-size: 14px; line-height: 1.4; }
+.hotspot-info-close {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #444;
+}
+.hotspot-coords { display:block; color:#666; font-size:12px; margin-top:8px; }

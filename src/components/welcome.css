@@ -1,0 +1,151 @@
+/* ===== Welcome multilayer styles (append to src/index.css) ===== */
+
+.welcome-multi {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #0b1220;
+  display: block;
+  transition: opacity .5s ease, visibility .5s ease;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* entrance + exit */
+.welcome-multi.welcome--in { opacity: 1; transform: translateY(0); }
+.welcome-multi.welcome--exit { opacity: 0; visibility: hidden; transition: opacity .52s ease; }
+
+/* layer base */
+.layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Sky (parallax) */
+.layer-sky {
+  z-index: 0;
+  filter: none;
+  transform: translate3d(0,0,0) scale(1.02);
+}
+
+/* Mountains (STATIC mid-ground) */
+.layer-mountains {
+  z-index: 1;
+  transform: translate3d(0,0,0) scale(1);
+}
+
+/* subject icons */
+.subject-icon {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  z-index: 3;
+  transition: transform 120ms linear;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
+}
+
+/* UI overlay */
+.welcome-ui {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF2EF;
+  pointer-events: auto;
+  padding: 20px;
+}
+
+/* topbar */
+.welcome-topbar {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:8;
+}
+.home-btn {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.04);
+  color: #FFF2EF;
+  font-weight: 700;
+  cursor: pointer;
+}
+.welcome-contact {
+  text-align: right;
+  color: rgba(255,242,239,0.92);
+  font-size: 13px;
+}
+
+/* center content */
+.welcome-center {
+  text-align:center;
+  z-index: 9;
+  max-width: 960px;
+  padding: 16px;
+}
+.brand-title {
+  font-family: 'Fredoka One', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: clamp(36px, 6vw, 62px);
+  margin: 0;
+  color: #FFDF88;
+  text-shadow: 0 10px 28px rgba(0,0,0,0.55);
+}
+.brand-sub {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 12px;
+  margin-bottom: 18px;
+  color: rgba(255,242,239,0.92);
+  max-width: 720px;
+  line-height: 1.45;
+}
+
+/* start btn */
+.start-btn {
+  background: linear-gradient(180deg, #F7A5A5, #FFA55D);
+  border: none;
+  border-radius: 14px;
+  padding: 12px 34px;
+  font-weight: 800;
+  color: #1f1f1f;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 14px 42px rgba(167,101,69,0.16);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.start-btn:hover { transform: translateY(-6px); box-shadow: 0 24px 64px rgba(167,101,69,0.22); }
+
+/* footer */
+.welcome-footer {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  font-size: 13px;
+  color: rgba(255,242,239,0.86);
+}
+
+/* responsive */
+@media (max-width: 760px) {
+  .subject-icon { width: 56px; height: 56px; }
+  .brand-title { font-size: clamp(22px, 8vw, 36px); }
+  .brand-sub { font-size: 14px; padding: 0 12px; }
+  .welcome-topbar { top: 12px; left: 12px; right: 12px; }
+  .welcome-contact { display: none; }
+}

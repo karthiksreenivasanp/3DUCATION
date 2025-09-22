@@ -1,0 +1,55 @@
+/* Basic wrapper */
+.subjects-page { font-family: Inter, system-ui, Arial, sans-serif; color: #0b1220; }
+
+/* HERO */
+.subjects-hero {
+  background: linear-gradient(rgba(6,10,14,0.7), rgba(6,10,14,0.55)), url('/assets/subjects/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 86px 24px;
+  text-align: center;
+}
+.subjects-hero-inner { max-width: 980px; margin: 0 auto; }
+.hero-title { font-size: 48px; margin: 0 0 16px; font-weight: 800; color: #fff; }
+.logo-3d { color: #13a4ec; }
+.hero-sub { max-width: 720px; margin: 0 auto 20px; opacity: 0.95; }
+.btn-start {
+  background: #13a4ec; color: #fff; border: none; padding: 12px 28px; border-radius: 8px;
+  font-weight: 700; cursor: pointer; box-shadow: 0 8px 24px rgba(19,164,236,0.15);
+}
+.btn-start:hover { transform: translateY(-2px); }
+
+/* SUBJECTS SECTION */
+.container { max-width: 1200px; margin: 32px auto; padding: 0 20px; }
+.section-title { text-align: center; font-size: 28px; margin-bottom: 22px; color: #111827; }
+
+/* responsive grid */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* card */
+.subject-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(15,23,42,0.04);
+  box-shadow: 0 8px 20px rgba(15,23,42,0.06);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.subject-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(15,23,42,0.12); }
+
+.subject-card-inner { display:flex; flex-direction:column; align-items:center; gap:12px; }
+.subject-image-wrap { width: 84px; height: 84px; border-radius: 12px; display:flex; align-items:center; justify-content:center; background: #f7f7f9; }
+.subject-image { width: 56px; height: 56px; object-fit: contain; }
+.subject-name { font-weight: 700; color: #0b1220; font-size: 15px; }
+
+/* footer */
+.subjects-footer { text-align:center; padding: 28px 0; color: #6b7280; }
