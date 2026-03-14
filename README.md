@@ -7,7 +7,7 @@
 ## 🚀 Overview
 
 **3ducation** (pronounced *Education 3.0*) brings together the **three pillars of modern learning** —  
-👩‍🏫 **Personalization**, 🤝 **Collaboration**, and 🧠 **Intelligence**.
+👩‍🏫 **Personalization**, 🤝 **Collaboration**, and 🧠 **Intelligence**
 
 The app leverages **AI**, **speech and image recognition**, and **real-time analytics** to assist students in learning more effectively while helping teachers track and improve performance outcomes.
 
